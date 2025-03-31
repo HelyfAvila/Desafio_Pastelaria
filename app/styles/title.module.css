@@ -1,0 +1,110 @@
+.titleContainer {
+    border: 3px solid #c7c05e;
+    /* Exemplo de borda vermelha */
+    background-color: white;
+    /* vermelho */
+    text-align: center;
+    padding: 16px;
+    border-radius: 8px;
+    /* Centraliza o elemento */
+    display: flex;
+    justify-content: center;
+    /* Alinha o conteúdo horizontalmente no centro */
+    align-items: center;
+    /* Alinha o conteúdo verticalmente no centro */
+    /* Tamanho do elemento ajustado */
+    width: clamp(300px, 60%, 500px);
+    /* Mínimo 300px, ajustável até 500px */
+    max-width: 500px;
+    /* Largura máxima de 600px */
+    height: auto;
+    /* Altura automática baseada no conteúdo */
+    margin: 0 auto;
+    /* Centraliza o próprio contêiner */
+    margin-top: 10px;
+}
+
+.menuContainer {
+    background-color: #f3f3dc;
+    text-align: center;
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; /* Permite quebra de linha */
+    width: clamp(300px, 60%, 500px);
+    max-width: 500px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+    gap: 10px;
+}
+
+.productContainer {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(25% - 10px); /* 4 por linha */
+    max-width: 100px;
+    height: 100px;
+}
+
+
+.titleText {
+    font-family: 'Bungee', cursive;
+    font-weight: bold;
+    margin-right: 10px;
+    /* Espaço entre o h1 e o img */
+    white-space: nowrap;
+    font-size: clamp(18px, 5vw, 29px);
+    /* Define o tamanho entre 18px e 32px, e ajusta com base na largura da tela */
+    color: #868682;
+}
+
+/* Responsividade da imagem */
+.LogoPastel {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efeito ao passar o mouse */
+.LogoPastel:hover {
+    transform: scale(1.1); /* Aumenta 10% ao passar o mouse */
+}
+
+
+.logo {
+    width: 40px;
+    /* Ajuste o tamanho do logo */
+    height: auto;
+}
+
+
+/* Ajustes para telas muito grandes */
+@media (min-width: 1200px) {
+    .titleContainer {
+        width: 40%;
+        /* Reduz o tamanho do contêiner em telas muito grandes */
+        padding: 8px 12px;
+    }
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 600px) {
+    .productContainer {
+        width: calc(33.33% - 10px); /* 3 por linha */
+    }
+}
+
+@media (max-width: 400px) {
+    .productContainer {
+        width: calc(50% - 10px); /* 2 por linha */
+    }
+}
